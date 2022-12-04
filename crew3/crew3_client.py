@@ -25,6 +25,7 @@ quest_info = {
     "195f8227-8f42-44e5-859f-7272ae4eb69e": {"chain": "cosmos", "amount": 50},
     "ddc24553-339f-4ee5-9918-afc0365b8054": {"chain": "cosmos", "amount": 500},
     "386acb23-203b-494d-99e4-3126ebc77ad9": {"chain": "stars", "amount": 1000},
+    "2f03eb5f-9461-4839-8e02-c03700b8c070": {"chain": "stars", "amount": 10000},
 }
 
 
