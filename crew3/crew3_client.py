@@ -53,8 +53,11 @@ class Crew3Client:
         return self._post("claimed-quests/review", content)
 
     def fetch_pending_quests(self):
-        quests = self._get("claimed-quests").json()["data"]
-        return filter(lambda x: x["status"] == "pending", quests)
+        data = self._get("claimed-quests").json()
+        if "data" not in data:
+            LOG.warning("No pending quests")
+            return []
+        return filter(lambda x: x["status"] == "pending", data["data"])
 
     def review_delegation_quest(self, quest):
         quest_id = quest["questId"]
